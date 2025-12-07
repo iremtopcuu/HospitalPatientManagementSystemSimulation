@@ -4,7 +4,7 @@ public class TestQueue {
 
         TreatmentQueue queue = new TreatmentQueue();
 
-        // 8 tedavi isteği ekle
+        // Add 8 treatment requests.
         queue.enqueue(new TreatmentRequest(10, System.currentTimeMillis()));
         queue.enqueue(new TreatmentRequest(20, System.currentTimeMillis()));
         queue.enqueue(new TreatmentRequest(30, System.currentTimeMillis()));
@@ -14,16 +14,16 @@ public class TestQueue {
         queue.enqueue(new TreatmentRequest(70, System.currentTimeMillis()));
         queue.enqueue(new TreatmentRequest(80, System.currentTimeMillis()));
 
-        System.out.println("--- Kuyruk (8 istek eklendi) ---");
+        System.out.println("---  8 treatment requests are added  ---");
         queue.printQueue();
 
-        // 3 isteği işleme (dequeue)
-        System.out.println("\n--- İşlenen 3 istek ---");
+        //  dequeue 3 requests.
+        System.out.println("\n---  dequeue 3 requests.  ---");
         System.out.println(queue.dequeue());
         System.out.println(queue.dequeue());
         System.out.println(queue.dequeue());
 
-        System.out.println("\n--- Kalan Kuyruk ---");
+        System.out.println("\n--- remaining queue ---");
         queue.printQueue();
     }
 }

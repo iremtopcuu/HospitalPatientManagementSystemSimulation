@@ -4,6 +4,12 @@ public class TreatmentRequest {
 
     public TreatmentRequest(int patientId ,long arrivalTime) {
         this.patientId = patientId;
-        this.arrivalTime=arrivalTime;
+        this.arrivalTime = arrivalTime;
     }
-}
+        public String toString() {
+            return "PatientID: " + patientId +
+                    ", ArrivalTime: " + arrivalTime;
+        }
+    }
+
+

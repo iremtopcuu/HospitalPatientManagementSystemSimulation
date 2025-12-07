@@ -13,7 +13,7 @@ public class TreatmentQueue {
      Node front; //ilk eleman
      int count=0;
 
-    public void enqueue(TreatmentRequest request){
+    public void enqueue(TreatmentRequest request){ //added
         Node var= new Node(request);
         if(front==null){
             front=var;;
@@ -25,16 +25,18 @@ public class TreatmentQueue {
         }
     }
 
-    public TreatmentRequest dequeue(){
+    public TreatmentRequest dequeue(){ //remove
         if(front==null) {
             System.out.println("Queue is empty");
             return null;
         }
+        TreatmentRequest result = front.data;
         front=front.next;
         if(front==null){
             rear=null;
         }
-        return front.data;
+
+        return result;
     }
 
 
