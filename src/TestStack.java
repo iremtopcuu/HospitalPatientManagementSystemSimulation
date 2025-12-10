@@ -8,6 +8,7 @@ public class TestStack {
         DischargeRecord r4=new DischargeRecord(80,System.currentTimeMillis());
         DischargeRecord r5=new DischargeRecord(90,System.currentTimeMillis());
 
+        System.out.println("---- Adding 5 Records ----");
         stack.push(r1);
         stack.push(r2);
         stack.push(r3);
