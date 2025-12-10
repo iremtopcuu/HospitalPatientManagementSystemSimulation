@@ -9,7 +9,7 @@ public class DischargeStack {
         }
     }
     Node top = null;//en üst düğümü tutan gösterici
-    int count=0;
+
 
     public void push(DischargeRecord record){
         Node var=new Node(record);
