@@ -14,7 +14,7 @@ public class TestStack {
         stack.push(r4);
         stack.push(r5);
         stack.printStack();
-        System.out.println("-----------------------------------------");
+        System.out.println("\n---- Popping 2 Records ----");
         stack.pop();
         stack.pop();
         System.out.println("2 records are removed. Remaining stack:\n");
