@@ -48,6 +48,10 @@ public class PatientList {
                     System.out.println("Patient with ID " + id + " has been deleted.");
                     return;
                 }
+                else{
+                    System.out.println("Patient not found");
+                    return;
+                }
             }
         }
 

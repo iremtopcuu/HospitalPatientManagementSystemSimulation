@@ -6,9 +6,9 @@ public class Main {
     list.addPatient(new Patient(20,"ceren", 2,18));
     list.addPatient(new Patient(30,"yusuf", 3,7));
     list.addPatient(new Patient(40,"oğuzhan", 4,23));
-    list.addPatient(new Patient(50,"elif", 5,78));
+    list.addPatient(new Patient(50,"elif", 5,56));
     System.out.println("--------------------------------------------");
-    list.removePatient(40);
+    list.removePatient(78);
     System.out.println(list.findPatient(30));
     System.out.println("    LİST       ");
     list.printList();
