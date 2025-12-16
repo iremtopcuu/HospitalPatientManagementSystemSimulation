@@ -8,7 +8,7 @@ public class Main {
     list.addPatient(new Patient(40,"oğuzhan", 4,23));
     list.addPatient(new Patient(50,"elif", 5,56));
     System.out.println("--------------------------------------------");
-    list.removePatient(78);
+    list.removePatient(40);
     System.out.println(list.findPatient(30));
     System.out.println("    LİST       ");
     list.printList();

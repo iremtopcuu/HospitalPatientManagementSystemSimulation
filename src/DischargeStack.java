@@ -19,6 +19,7 @@ public class DischargeStack {
         }else{
             var.next=top;
             top=var;
+            return;
 
         }
     } //Add a discharge record
