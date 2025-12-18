@@ -8,17 +8,18 @@ public class TestStack {
         DischargeRecord r4=new DischargeRecord(80,System.currentTimeMillis());
         DischargeRecord r5=new DischargeRecord(90,System.currentTimeMillis());
 
-        System.out.println("---- Adding 5 Records ----");
+        System.out.println("---- adding 5 records ----");
         stack.push(r1);
         stack.push(r2);
         stack.push(r3);
         stack.push(r4);
         stack.push(r5);
         stack.printStack();
-        System.out.println("\n---- Popping 2 Records ----");
+        System.out.println("\n---- popping 2 records ----");
         stack.pop();
         stack.pop();
-        System.out.println("\n -----2 records are removed. Remaining stack:-----");
+        stack.peek();
+        System.out.println("\n -----2 records removed. remaining stack:-----");
         stack.printStack();
 
 

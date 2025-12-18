@@ -1,40 +1,43 @@
 public class PatientList {
-    Node head = null;
-    Node tail = null;
+    Node head = null; //ilk düğüm
+    Node tail = null; //son düğüm
 
+    //add a new patient to the list
     void addPatient(Patient pt) {
         Node var = new Node(pt);
-        if (head == null) {
-            head = var;
+        if (head == null) { //if the list is empty
+            head = var; //head and tail will be new node
             tail = var;
             System.out.println("Patient registration list created.");
 
-        } else {
+        } else { //if the list is not empty
             tail.next = var;
-            tail = var;
+            tail = var; //tail will be new node
             System.out.println("The patient has been added.");
 
         }
 
     }
 
+    //remove a patient by their ID
     void removePatient(int id) {
-        if (head == null) {
+        if (head == null) { //if the list is empty
             System.out.println("The list is empty, there is no patient to delete.");
             return;
         } else {
-            if (id == head.data.id && head.next == null) {
-                head = null;
+            if (id == head.data.id && head.next == null) { //if the list has an element
+                head = null;//the list is empty
                 tail = null;
                 System.out.println("Patient with ID  " + id + " has been deleted.");
                 return;
-            } else if (id == head.data.id && head.next != null) {
+            } else if (id == head.data.id && head.next != null) { //the list isn't empty
                 head = head.next;
                 System.out.println("Patient with ID " + id + " has been deleted.");
-            } else {
-                Node temp = head, temp2 = head;
-                while (temp.next != null) {
-                    if (id == temp.data.id) {
+            } else { //if a middle or last node is to be removed
+                Node temp = head;
+                Node temp2 = head;
+                while (temp.next != null) {  // travel to the end of the list
+                    if (id == temp.data.id) { //if we find the searching ID
                         temp2.next = temp.next;
                         System.out.println("Patient with ID  " + id + " has been deleted.");
                         return;
@@ -42,14 +45,14 @@ public class PatientList {
                     temp2 = temp;
                     temp = temp.next;
                 }
-                if (id == temp.data.id) {
-                    temp2.next = null;
-                    tail = temp2;
+                if (id == temp.data.id) { //control the last node
+                    temp2.next = null; //remove the last node
+                    tail = temp2; // update tail
                     System.out.println("Patient with ID " + id + " has been deleted.");
                     return;
                 }
                 else{
-                    System.out.println("Patient not found");
+                    System.out.println("Patient not found"); // we do not find ID
                     return;
                 }
             }
@@ -58,27 +61,31 @@ public class PatientList {
 
     }
 
-    public boolean findPatient(int id) {
+
+    public void findPatient(int id) {  //search for a patient by ID and return the object.
         Node temp = head;
         while (temp != null) {
             if (temp.data.id == id) {
-                return true;
+                System.out.println("Name:  " + temp.data.name + " Severity: " + temp.data.severity + " Age:  " + temp.data.age );
+                return;
             } temp = temp.next;
-            }
-            return false;
+            }System.out.println("the patient not found!");
+            ;
         }
 
+        //print all list
     void printList(){
-        if(head==null){
+
+        if(head==null){ //if the list is empty
             System.out.println("The list is empty");
             return;
         }else{
             Node temp=head;
             while (temp!=null){
-                System.out.println("\n ID: " +temp.data.id);
-                System.out.println("Name: " +temp.data.name);
-                System.out.println("Severity: " + temp.data.severity);
-                System.out.println("Age:  " + temp.data.age);
+                System.out.println("\n ID: " +temp.data.id); //ıd
+                System.out.println("Name: " +temp.data.name);//name
+                System.out.println("Severity: " + temp.data.severity);//severity
+                System.out.println("Age:  " + temp.data.age);//age
                 temp=temp.next;
 
             }

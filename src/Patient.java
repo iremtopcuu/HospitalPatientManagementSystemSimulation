@@ -4,7 +4,7 @@ public class Patient {
     int severity; // Severity level of illness (1–10)
     int age;  // Patient’s age
 
-    public Patient(int id, String name,int severity, int age) {
+    public Patient(int id, String name,int severity, int age) { //constructor
         this.id = id;
         this.name=name;
         this.severity=severity;

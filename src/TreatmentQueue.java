@@ -13,7 +13,7 @@ public class TreatmentQueue {
      Node front; //ilk eleman
      int count=0;
 
-    public void enqueue(TreatmentRequest request){ //added
+    public void enqueue(TreatmentRequest request){ // add a new treatment request to the queue
         Node var= new Node(request);
         if(front==null){
             front=var;;
@@ -25,7 +25,7 @@ public class TreatmentQueue {
         }
     }
 
-    public TreatmentRequest dequeue(){ //remove
+    public TreatmentRequest dequeue(){ // remove
         if(front==null) {
             System.out.println("Queue is empty");
             return null;
@@ -40,8 +40,8 @@ public class TreatmentQueue {
     }
 
 
-    public int size() {
-        Node temp = front;
+    public int size() { // return the number of requests.
+        Node temp=front;
         while (temp != null) {
             count++;
             temp = temp.next;
@@ -49,18 +49,19 @@ public class TreatmentQueue {
         return count;
     }
 
-    public void  printQueue(){
-        if(front==null){
+    public void  printQueue() {
+        if (front == null) {
             System.out.println("Queue is empty.");
             return;
-        }
-        Node temp=front;
-        while (temp!=null){
-            System.out.println(temp.data);
-            temp=temp.next;;
+        } else {
+            Node temp = front;
+            while (temp != null) {
+                System.out.println(temp.data);
+                temp = temp.next;
+
+            }
         }
     }
-
 
 
 }
