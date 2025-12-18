@@ -25,6 +25,7 @@ public class TestQueue {
         queue.enqueue(r8);
         queue.printQueue();
 
+       queue.size();
         //  dequeue 3 requests.
         System.out.println("\n---  dequeue 3 requests  ---");
         System.out.println(queue.dequeue());
@@ -33,6 +34,8 @@ public class TestQueue {
 
         System.out.println("\n--- remaining queue ---");
         queue.printQueue();
+
+        queue.size();
     }
 }
 

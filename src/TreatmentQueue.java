@@ -1,6 +1,6 @@
 public class TreatmentQueue {
 
-    private class Node {
+    private class Node { //Node class
         TreatmentRequest data;
         Node next;
 
@@ -18,11 +18,13 @@ public class TreatmentQueue {
         if(front==null){
             front=var;;
             rear=var;
+            count++;
             return;
         } else {
             rear.next=var;
             rear=var;
         }
+        count++;
     }
 
     public TreatmentRequest dequeue(){ // remove
@@ -35,18 +37,13 @@ public class TreatmentQueue {
         if(front==null){
             rear=null;
         }
-
+        count--;
         return result;
     }
 
 
-    public int size() { // return the number of requests.
-        Node temp=front;
-        while (temp != null) {
-            count++;
-            temp = temp.next;
-        }
-        return count;
+    public void size() { // return the number of requests.
+        System.out.println( "the number of requests: " + count);
     }
 
     public void  printQueue() {
