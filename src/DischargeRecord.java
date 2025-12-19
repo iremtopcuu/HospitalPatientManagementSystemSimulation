@@ -1,6 +1,6 @@
 public class DischargeRecord {
-    int patientId;
-    long dischargeTime;
+    int patientId;//ID of the discharged patient
+    long dischargeTime; // timestamp of discharge
 
     public DischargeRecord(int patientId,long dischargeTime) {
         this.patientId = patientId;

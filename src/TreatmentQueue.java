@@ -46,6 +46,7 @@ public class TreatmentQueue {
         System.out.println( "the number of requests: " + count);
     }
 
+    //print all queue
     public void  printQueue() {
         if (front == null) {
             System.out.println("Queue is empty.");
