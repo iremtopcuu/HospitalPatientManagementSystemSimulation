@@ -1,5 +1,5 @@
 public class DischargeStack {
-    private class Node {
+    private class Node { //node class
         DischargeRecord data;
         Node next;
 
@@ -10,13 +10,14 @@ public class DischargeStack {
     }
     Node top = null;//en üst düğümü tutan gösterici
 
-//add a discharge record
+
+    //add a discharge record
     public void push(DischargeRecord record){
         Node var=new Node(record);
         if(top==null){ //if stack is empty
             top=var;
             return;
-        }else{
+        }else{ //stack is not empty
             var.next=top;
             top=var;
             return;
@@ -25,7 +26,7 @@ public class DischargeStack {
     }
 
     public DischargeRecord pop(){  //Remove and return the top record.
-        if(top==null){
+        if(top==null){ //stack is empty
             System.out.println("Stack is empty!");
             return null;
         }else{
