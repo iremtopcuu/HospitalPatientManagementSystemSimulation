@@ -13,7 +13,7 @@ public class PatientList {
         } else { //if the list is not empty
             tail.next = var;
             tail = var; //tail will be new node
-            System.out.println("The patient has been added.");
+            //System.out.println("The patient has been added.");
 
         }
 

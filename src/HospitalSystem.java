@@ -1,23 +1,28 @@
 import java.util.*;
 public class HospitalSystem {
-private  PatientList patientList; // for admitted patients
-private  TreatmentQueue treatmentQueue; // for waiting patients
-private DischargeStack dischargeStack; // for processed discharges
-private  HashMap<Integer,Patient> patientMap; // for quick patients lookups
+public   PatientList patientList; // for admitted patients
+public  PriorityTreatmentQueue treatmentQueue; // for waiting patients
+public DischargeStack dischargeStack; // for processed discharges
+public  HashMap<Integer,Patient> patientMap; // for quick patients lookups
 
     public HospitalSystem() { //this is constructor
         patientList=new PatientList();
-        treatmentQueue=new TreatmentQueue();
+        treatmentQueue=new PriorityTreatmentQueue();
         dischargeStack=new DischargeStack();
         patientMap=new HashMap<>();
     }
     public  void addNewPatient(Patient patient){ //add a new patient
         patientList.addPatient(patient);
         patientMap.put(patient.id,patient);//HashMape hızlı erişim için
-        System.out.println("New patient added>>  ID: " + patient.id + "Name: " + patient.name);
+        System.out.println("New patient added>>  ID: " + patient.id + " Name: " + patient.name);
     }
-    public void addTreatmentRequest(int patientId){ //  add a treatment request
-        TreatmentRequest request= new TreatmentRequest(patientId);
+    public void addTreatmentRequest(int patientId,boolean priority){//  add a treatment request
+        if(!patientMap.containsKey(patientId)){
+            System.out.println("Patient not found ");
+            return;
+
+        }
+        TreatmentRequest request= new TreatmentRequest(patientId,priority);
         treatmentQueue.enqueue(request);
 
     }
@@ -31,7 +36,7 @@ private  HashMap<Integer,Patient> patientMap; // for quick patients lookups
             dischargeStack.push(record);
         }
     }
-    public void printSystem(){
+    public void printSystem(){ //print all
         System.out.println("PATIENTS: ");
         patientList.printList();
 
