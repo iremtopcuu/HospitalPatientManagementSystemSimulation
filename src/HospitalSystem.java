@@ -36,6 +36,28 @@ public  HashMap<Integer,Patient> patientMap; // for quick patients lookups
             dischargeStack.push(record);
         }
     }
+    public void sortBySeverity() {
+        if (patientList.head == null || patientList.head.next == null) return; // boş veya tek eleman
+
+        boolean swapped;
+        do {
+            swapped = false;
+            Node current = patientList.head;
+            while (current.next != null) {
+                if (current.data.severity < current.next.data.severity) {
+                    // swap patient objelerini
+                    Patient temp = current.data;
+                    current.data = current.next.data;
+                    current.next.data = temp;
+                    swapped = true;
+                }
+                current = current.next;
+            }
+        } while (swapped);
+    }
+
+
+
     public void printSystem(){ //print all
         System.out.println("PATIENTS: ");
         patientList.printList();
