@@ -10,7 +10,7 @@ public class TestHospitalSystem {
         hs.addNewPatient(new Patient(70,"Rumeysa Delican",6,8));
         hs.addNewPatient(new Patient(80,"Rabia Acer",4,37));
         hs.addNewPatient(new Patient(90,"Tuğba ALkoç",5,19));
-        hs.addNewPatient(new Patient(100,"Talha Mete Deveci",6,25));
+        hs.addNewPatient(new Patient(100,"Talha Mete Deveci",8,25));
 
         hs.addTreatmentRequest(10,false); //tedavi taleplerini ekle priority=öncelikli true
         hs.addTreatmentRequest(50,false);

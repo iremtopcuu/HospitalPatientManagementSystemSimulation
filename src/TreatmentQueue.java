@@ -29,7 +29,7 @@ public class TreatmentQueue {
 
     public TreatmentRequest dequeue(){ // remove
         if(front==null) {
-            System.out.println("Queue is empty");
+          // System.out.println("Queue is empty");
             return null;
         }
         TreatmentRequest result = front.data;
