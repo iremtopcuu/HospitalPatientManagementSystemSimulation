@@ -6,7 +6,7 @@ public class TestHospitalSystem {
         hs.addNewPatient(new Patient(30,"Nazlı Bayram",5,75));
         hs.addNewPatient(new Patient(40,"Oğuzhan Yıldırım",3,23));
         hs.addNewPatient(new Patient(50,"Rana Narin",7,30));
-        hs.addNewPatient(new Patient(60,"Emre Bıkmaz ", 9,45));
+        hs.addNewPatient(new Patient(60,"Emre  Kaymaz ", 9,45));
         hs.addNewPatient(new Patient(70,"Rumeysa Delican",6,8));
         hs.addNewPatient(new Patient(80,"Rabia Acer",4,37));
         hs.addNewPatient(new Patient(90,"Tuğba ALkoç",5,19));
@@ -22,11 +22,11 @@ public class TestHospitalSystem {
         hs.addTreatmentRequest(20,false);
 
         hs.addDischargeRecord(new DischargeRecord(30,System.currentTimeMillis())); //taburcu kayıtları
-        hs.addDischargeRecord(new DischargeRecord(80,System.currentTimeMillis()));
+        hs.addDischargeRecord(new DischargeRecord(100,System.currentTimeMillis()));
 
         hs.processTreatment();// // process treatment requests (priority first) Tedavi taleplerini işle (öncelikli olanlar önce)”
         hs.processTreatment();
-        hs.processTreatment();;
+        hs.processTreatment();
         hs.processTreatment();
 
         hs.printSystem();

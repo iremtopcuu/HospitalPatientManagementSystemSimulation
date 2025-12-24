@@ -19,7 +19,7 @@ public class TestStack {
         stack.pop();
         stack.pop();
 
-        stack.peek();
+        //stack.peek();
 
         System.out.println("\n -----2 records removed. remaining stack:-----");
         stack.printStack();

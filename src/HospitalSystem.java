@@ -45,7 +45,7 @@ public  HashMap<Integer,Patient> patientMap; // for quick patients lookups
             Node current = patientList.head;
             while (current.next != null) {
                 if (current.data.severity < current.next.data.severity) {
-                    // swap patient objelerini
+                    // swap
                     Patient temp = current.data;
                     current.data = current.next.data;
                     current.next.data = temp;

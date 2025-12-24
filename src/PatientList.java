@@ -70,7 +70,7 @@ public class PatientList {
                 return;
             } temp = temp.next;
             }System.out.println("the patient not found!");
-            ;
+
         }
 
         //print all list
